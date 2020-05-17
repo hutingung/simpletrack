@@ -21,6 +21,7 @@ export class VisitorComponent implements OnInit {
 
   onSubmit() {
     console.log(this.visitor.getSubmitUrl());
+    window.open(this.visitor.getSubmitUrl(), '_blank');
   }
 
 }

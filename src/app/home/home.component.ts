@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { environment } from './../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit {
   }
 
   set url(url: string) {
-    this.qrCodeUrl = 'http://localhost:4200/visitor?url=' + btoa(url);
+    this.qrCodeUrl = environment.hostUrl + btoa(url);
     console.log(this.qrCodeUrl);
   }
 
