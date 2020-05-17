@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   }
 
   set url(url: string) {
-    this.qrCodeUrl = environment.hostUrl + btoa(url);
+    this.qrCodeUrl = environment.hostUrl + '/visitor?url=' + btoa(url);
     console.log(this.qrCodeUrl);
   }
 
