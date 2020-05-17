@@ -1,0 +1,37 @@
+<mat-grid-list cols="4" class="bgimg" rowHeight="35vh">
+  <mat-grid-tile [colspan]=1>
+  </mat-grid-tile>
+  <mat-grid-tile [rowspan]=2 [colspan]="2">
+    <div class="form-box">
+      <h2>Visitor Form</h2>
+      <p>
+        <mat-form-field appearance="standard" class="input-full-width">
+          <mat-label>Name: </mat-label>
+          <label>
+            <input matInput [(ngModel)]="visitor.name">
+          </label>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="standard" class="input-full-width">
+          <mat-label>Phone Number: </mat-label>
+          <label>
+            <input matInput [(ngModel)]="visitor.phoneNumber">
+          </label>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="standard" class="input-full-width">
+          <mat-label>Body Temperature: </mat-label>
+          <label>
+            <input matInput [(ngModel)]="visitor.bodyTemperature">
+          </label>
+        </mat-form-field>
+      </p>
+      <p>
+          <mat-checkbox>I declared the information I have filled in is accurate and correct.</mat-checkbox>
+      </p>
+      <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

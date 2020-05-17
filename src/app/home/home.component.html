@@ -1,0 +1,22 @@
+<mat-grid-list cols="4" class="bgimg" rowHeight="35vh">
+  <mat-grid-tile [colspan]=1>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="2">
+    <div class="form-box">
+      <h2>Generate QR Code</h2>
+      <p>
+        <mat-form-field appearance="standard" class="input-full-width">
+          <mat-label>Google Form URL: </mat-label>
+          <input matInput [(ngModel)]="url">
+        </mat-form-field>
+      </p>
+
+      <button mat-raised-button color="primary" (click)="onPrint()">Print</button>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="4">
+    <qrcode [qrdata]="qrCodeUrl" [width]="256" [errorCorrectionLevel]="'M'" *ngIf="qrCodeUrl"></qrcode>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
